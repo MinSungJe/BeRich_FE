@@ -1,7 +1,7 @@
 import { Text } from "@rneui/base";
 import { View } from "react-native";
 
-function Stock() {
+export default function StockInfo() {
     return (
         <View>
             <Text>주식 페이지</Text>

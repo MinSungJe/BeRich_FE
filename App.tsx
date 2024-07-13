@@ -1,30 +1,11 @@
-import { Input, Text } from '@rneui/base';
-import { ThemeProvider } from '@rneui/themed';
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-} from 'react-native';
-import { mainTheme } from './src/resource/style/MainTheme';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import TabScreen from './src/TabBar/TabComponents';
 
-function App(): React.JSX.Element {
-
+export default function App() {
   return (
-    
-    <ThemeProvider theme={mainTheme}>
-
-    <SafeAreaView>
-      <Text>기본 앱 화면입니다</Text>
-      <Input
-      placeholder='BASIC INPUT'
-    />
-    </SafeAreaView>
-    </ThemeProvider>
+    <NavigationContainer>
+      <TabScreen />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-
-});
-
-export default App;
