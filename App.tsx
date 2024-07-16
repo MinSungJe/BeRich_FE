@@ -7,13 +7,8 @@ export default function App() {
   let [isLogin, setIsLogin] = React.useState(false)
 
   return (
-    isLogin ?
       <NavigationContainer>
-        <TabScreen />
-      </NavigationContainer>
-      :
-      <NavigationContainer>
-        <SwipeScreen />
+        {isLogin ? <TabScreen /> : <SwipeScreen />}
       </NavigationContainer>
   );
 }
