@@ -1,8 +1,9 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import StockInfo from '../stock/page';
-import BuySell from '../buy/page';
-import UserInfo from '../user/page';
+import StockInfo from '../Stock/page';
+import BuySell from '../Buy/page';
+import UserInfo from '../User/page';
+import { Color } from '../resource/Color';
 
 
 const Tab = createBottomTabNavigator();
@@ -12,7 +13,7 @@ export default function TabScreen() {
     <Tab.Navigator
       initialRouteName="주식"
       screenOptions={{
-        tabBarActiveTintColor: '#e91e63',
+        tabBarActiveTintColor: Color.MainColor,
       }}>
       <Tab.Screen
         name="주식"
