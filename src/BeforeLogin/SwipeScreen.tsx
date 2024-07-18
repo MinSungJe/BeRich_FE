@@ -30,7 +30,7 @@ export default function SwipeScreen() {
         component={AutoTradeInfoScreen}
       />
       <Tab.Screen
-        name="Login"
+        name="LoginInfo"
         component={LoginInfoScreen}
       />
     </Tab.Navigator>
