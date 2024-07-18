@@ -1,33 +1,37 @@
 import * as React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Screen_1, Screen_2, Screen_3 } from './Screen';
 import { Color } from '../resource/Color';
+import WelcomeScreen from './WelcomeScreen';
+import StockInfoScreen from './StockInfoScreen';
+import LoginInfoScreen from './LoginInfoScreen';
+import AutoTradeInfoScreen from './AutoTradeInfoScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
 export default function SwipeScreen() {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Welcome"
       screenOptions={{
         tabBarActiveTintColor: Color.MainColor,
         tabBarStyle: {display: 'none'}
       }}
     >
       <Tab.Screen
-        name="Feed"
-        component={Screen_1}
-        options={{ tabBarLabel: 'Home' }}
+        name="Welcome"
+        component={WelcomeScreen}
       />
       <Tab.Screen
-        name="Notifications"
-        component={Screen_2}
-        options={{ tabBarLabel: 'Updates' }}
+        name="StockInfo"
+        component={StockInfoScreen}
       />
       <Tab.Screen
-        name="Profile"
-        component={Screen_3}
-        options={{ tabBarLabel: 'Profile' }}
+        name="AutoTradeInfo"
+        component={AutoTradeInfoScreen}
+      />
+      <Tab.Screen
+        name="LoginInfo"
+        component={LoginInfoScreen}
       />
     </Tab.Navigator>
   );

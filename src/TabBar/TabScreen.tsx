@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import StockInfo from '../Stock/page';
+import Stock from '../Stock/page';
 import BuySell from '../Buy/page';
 import UserInfo from '../User/page';
 import { Color } from '../resource/Color';
@@ -17,7 +17,7 @@ export default function TabScreen() {
       }}>
       <Tab.Screen
         name="주식"
-        component={StockInfo}
+        component={Stock}
         options={{
           tabBarLabel: '주식',
           tabBarIcon: ({ color, size }) => (
