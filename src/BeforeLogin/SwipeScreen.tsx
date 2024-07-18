@@ -11,7 +11,7 @@ const Tab = createMaterialTopTabNavigator();
 export default function SwipeScreen() {
   return (
     <Tab.Navigator
-      initialRouteName="Feed"
+      initialRouteName="Welcome"
       screenOptions={{
         tabBarActiveTintColor: Color.MainColor,
         tabBarStyle: {display: 'none'}
