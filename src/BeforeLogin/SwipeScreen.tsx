@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Screen_1, Screen_2, Screen_3 } from './Screen';
 import { Color } from '../resource/Color';
+import WelcomeScreen from './WelcomeScreen';
+import StockInfoScreen from './StockInfoScreen';
+import LoginInfoScreen from './LoginInfoScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -16,17 +18,17 @@ export default function SwipeScreen() {
     >
       <Tab.Screen
         name="Feed"
-        component={Screen_1}
+        component={WelcomeScreen}
         options={{ tabBarLabel: 'Home' }}
       />
       <Tab.Screen
         name="Notifications"
-        component={Screen_2}
+        component={StockInfoScreen}
         options={{ tabBarLabel: 'Updates' }}
       />
       <Tab.Screen
         name="Profile"
-        component={Screen_3}
+        component={LoginInfoScreen}
         options={{ tabBarLabel: 'Profile' }}
       />
     </Tab.Navigator>
