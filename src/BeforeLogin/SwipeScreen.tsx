@@ -4,6 +4,7 @@ import { Color } from '../resource/Color';
 import WelcomeScreen from './WelcomeScreen';
 import StockInfoScreen from './StockInfoScreen';
 import LoginInfoScreen from './LoginInfoScreen';
+import AutoTradeInfoScreen from './AutoTradeInfoScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -17,19 +18,20 @@ export default function SwipeScreen() {
       }}
     >
       <Tab.Screen
-        name="Feed"
+        name="Welcome"
         component={WelcomeScreen}
-        options={{ tabBarLabel: 'Home' }}
       />
       <Tab.Screen
-        name="Notifications"
+        name="StockInfo"
         component={StockInfoScreen}
-        options={{ tabBarLabel: 'Updates' }}
       />
       <Tab.Screen
-        name="Profile"
+        name="AutoTradeInfo"
+        component={AutoTradeInfoScreen}
+      />
+      <Tab.Screen
+        name="Login"
         component={LoginInfoScreen}
-        options={{ tabBarLabel: 'Profile' }}
       />
     </Tab.Navigator>
   );
