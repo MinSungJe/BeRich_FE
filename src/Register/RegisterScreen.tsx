@@ -1,8 +1,9 @@
 import { Text, View } from 'react-native';
+import { BoxStyles } from '../Styles/Box/Box.style';
 
 export default function RegisterScreen() {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <View style={BoxStyles.ContainerBox}>
             <Text>회원가입 창임</Text>
         </View>
     );
