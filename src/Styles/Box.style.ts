@@ -18,6 +18,9 @@ export const BoxStyles = StyleSheet.create({
         padding: 10
     },
 
+    Flex1: {
+        flex: 1
+    },
 
     ContainerBox: {
         width: '100%',

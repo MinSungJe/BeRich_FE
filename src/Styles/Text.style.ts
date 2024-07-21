@@ -3,13 +3,13 @@ import { Color } from "../resource/Color";
 
 export const TextStyles = StyleSheet.create({
 	Title: {
-        fontSize: 30,
+        fontSize: 40,
         color: Color.MainColor,
         fontWeight: 'bold'
     },
 
     Main: {
-        fontSize: 16,
+        fontSize: 28,
         color: Color.MainColor
     }
 })
