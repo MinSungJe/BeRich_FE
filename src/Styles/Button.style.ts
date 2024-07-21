@@ -6,5 +6,11 @@ export const ButtonStyles = StyleSheet.create({
         backgroundColor: Color.MainColor,
         padding: 10,
         borderRadius: 10,
+    },
+
+    InputButton: {
+        backgroundColor: 'rgba(0, 0, 0, 0)',
+        color: Color.MainColor,
+        justifyContent: 'flex-start',
     }
 })

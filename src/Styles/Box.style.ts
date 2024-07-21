@@ -11,7 +11,8 @@ export const BoxStyles = StyleSheet.create({
     },
 
     AICenter: {
-        alignContent: 'center'
+        alignContent: 'center',
+        alignItems: 'center'
     },
 
     P10: {
@@ -20,6 +21,14 @@ export const BoxStyles = StyleSheet.create({
 
     Flex1: {
         flex: 1
+    },
+
+    MR10: {
+        marginRight: 10
+    },
+
+    Mb10: {
+        marginBottom: 10
     },
 
     ContainerBox: {

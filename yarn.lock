@@ -1695,6 +1695,11 @@
     prompts "^2.4.2"
     semver "^7.5.2"
 
+"@react-native-picker/picker@^2.7.7":
+  version "2.7.7"
+  resolved "https://registry.npmjs.org/@react-native-picker/picker/-/picker-2.7.7.tgz"
+  integrity sha512-CTHthVmx8ujlH/u5AnxLQfsheh/DoEbo+Kbx0HGTlbKVLC1eZ4Kr9jXIIUcwB7JEgOXifdZIPQCsoTc/7GQ0ag==
+
 "@react-native/assets-registry@0.74.85":
   version "0.74.85"
   resolved "https://registry.npmjs.org/@react-native/assets-registry/-/assets-registry-0.74.85.tgz"
@@ -5896,6 +5901,11 @@ react-native-autocomplete-input@^5.4.0:
   dependencies:
     deprecated-react-native-prop-types "^2.3.0"
 
+react-native-date-picker@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.npmjs.org/react-native-date-picker/-/react-native-date-picker-5.0.4.tgz"
+  integrity sha512-UycNfXGd4ipgdU2a+oZGj7h1nvp8Gz49f/Ko+YdWh6nrBKB49MEp0n9eF1QngbxMKqdK0AdY4udb4IdVVWji4g==
+
 react-native-pager-view@*, react-native-pager-view@^6.3.3, "react-native-pager-view@>= 4.0.0":
   version "6.3.3"
   resolved "https://registry.npmjs.org/react-native-pager-view/-/react-native-pager-view-6.3.3.tgz"
@@ -5941,7 +5951,7 @@ react-native-vector-icons@^10.1.0, react-native-vector-icons@>7.0.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native@*, react-native@0.74.3:
+react-native@*, "react-native@>= 0.64.3", react-native@0.74.3:
   version "0.74.3"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.74.3.tgz"
   integrity sha512-UFutCC6WEw6HkxlcpQ2BemKqi0JkwrgDchYB5Svi8Sp4Xwt4HA6LGEjNQgZ+3KM44bjyFRpofQym0uh0jACGng==
@@ -6006,7 +6016,7 @@ react-test-renderer@18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
-react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.8, react@>=17.0.0, react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, "react@>= 17.0.1", react@>=16.8, react@>=17.0.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==

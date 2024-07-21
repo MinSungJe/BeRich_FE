@@ -11,5 +11,10 @@ export const TextStyles = StyleSheet.create({
     Main: {
         fontSize: 28,
         color: Color.MainColor
+    },
+
+    Detail: {
+        fontSize: 16,
+        color: Color.MainColor
     }
 })
