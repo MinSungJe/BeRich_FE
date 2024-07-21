@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native';
-import { BoxStyles } from '../Styles/Box/Box.style';
+import { BoxStyles } from '../Styles/Box.style';
 
 export default function RegisterScreen() {
     return (

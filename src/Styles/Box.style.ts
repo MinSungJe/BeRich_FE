@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Color } from "../../resource/Color";
+import { Color } from "../resource/Color";
 
 export const BoxStyles = StyleSheet.create({
     ContainerBox: {
