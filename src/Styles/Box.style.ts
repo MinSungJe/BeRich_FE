@@ -2,12 +2,27 @@ import { StyleSheet } from "react-native";
 import { Color } from "../resource/Color";
 
 export const BoxStyles = StyleSheet.create({
+    W100: {
+        width: '100%'
+    },
+
+    JCCenter: {
+        justifyContent: 'center',
+    },
+
+    AICenter: {
+        alignContent: 'center'
+    },
+
+    P10: {
+        padding: 10
+    },
+
+
     ContainerBox: {
         width: '100%',
         padding: 10,
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
     },
 
 	MainBox: {
