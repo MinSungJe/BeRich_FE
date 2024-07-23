@@ -30,6 +30,9 @@ export const BoxStyles = StyleSheet.create({
     Mb10: {
         marginBottom: 10
     },
+    Mb20: {
+        marginBottom: 20
+    },
 
     ContainerBox: {
         width: '100%',
@@ -41,6 +44,7 @@ export const BoxStyles = StyleSheet.create({
         width: '100%',
         padding: 20,
         borderRadius: 10,
+        backgroundColor: Color.White,
 
         // 테두리
         borderWidth: 1,
