@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import StockScren from '../Pages/AfterLogin/StockScreen';
-import AutoTradeScreen from '../Pages/AfterLogin/AutoTradeScreen';
-import UserScreen from '../Pages/AfterLogin/UserScreen';
+import StockScren from '../pages/AfterLogin/StockScreen';
+import AutoTradeScreen from '../pages/AfterLogin/AutoTradeScreen';
+import UserScreen from '../pages/AfterLogin/UserScreen';
 import { Color } from '../resource/Color';
 
 

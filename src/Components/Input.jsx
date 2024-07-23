@@ -1,11 +1,11 @@
 import { View } from 'react-native';
-import { BoxStyles } from '../Styles/Box.style';
-import { TextStyles } from '../Styles/Text.style';
+import { BoxStyles } from '../styles/Box.style';
+import { TextStyles } from '../styles/Text.style';
 import { Button, Input, Text } from '@rneui/base';
 import { Picker } from '@react-native-picker/picker';
 import { useEffect, useState } from 'react';
 import DatePicker from 'react-native-date-picker'
-import { ButtonStyles } from '../Styles/Button.style';
+import { ButtonStyles } from '../styles/Button.style';
 
 export function LabelInput({ label, placeholder }) {
     return (

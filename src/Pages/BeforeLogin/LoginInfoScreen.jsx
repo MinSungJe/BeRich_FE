@@ -1,8 +1,8 @@
 import { Button, Text } from '@rneui/base';
 import { View } from 'react-native';
-import { ButtonStyles } from '../../Styles/Button.style';
-import { BoxStyles } from '../../Styles/Box.style';
-import { TextStyles } from '../../Styles/Text.style';
+import { ButtonStyles } from '../../styles/Button.style';
+import { BoxStyles } from '../../styles/Box.style';
+import { TextStyles } from '../../styles/Text.style';
 
 export default function LoginInfoScreen({navigation}) {
     return (
