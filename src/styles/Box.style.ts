@@ -18,6 +18,9 @@ export const BoxStyles = StyleSheet.create({
     P10: {
         padding: 10
     },
+    P20: {
+        padding: 20
+    },
 
     Flex1: {
         flex: 1
@@ -33,16 +36,18 @@ export const BoxStyles = StyleSheet.create({
     Mb20: {
         marginBottom: 20
     },
+    
+    BgBlack: {
+        backgroundColor: Color.MainColor,
+    },
 
     ContainerBox: {
         width: '100%',
-        padding: 10,
         flex: 1,
     },
 
 	MainBox: {
         width: '100%',
-        padding: 20,
         borderRadius: 10,
         backgroundColor: Color.White,
 
@@ -50,5 +55,19 @@ export const BoxStyles = StyleSheet.create({
         borderWidth: 1,
         borderStyle: 'solid',
         borderColor: Color.MainColor,
+    },
+
+    MainBoxTitle: {
+        backgroundColor: Color.MainColor,
+        borderWidth: 1,
+        borderStyle: 'solid',
+        borderColor: Color.MainColor,
+        padding: 5,
+        borderTopLeftRadius: 7,
+        borderTopRightRadius: 7
+    },
+
+    MainBoxContent: {
+        padding: 10,
     }
 })

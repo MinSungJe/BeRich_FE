@@ -1,45 +1,44 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import StockScren from '../pages/AfterLogin/StockScreen';
+import StockScreen from '../pages/AfterLogin/StockScreen';
 import AutoTradeScreen from '../pages/AfterLogin/AutoTradeScreen';
 import UserScreen from '../pages/AfterLogin/UserScreen';
 import { Color } from '../resource/Color';
-
 
 const Tab = createBottomTabNavigator();
 
 export default function TabScreen() {
   return (
     <Tab.Navigator
-      initialRouteName="주식"
+      initialRouteName="Stock"
       screenOptions={{
         tabBarActiveTintColor: Color.MainColor,
       }}>
       <Tab.Screen
-        name="주식"
-        component={StockScren}
+        name="Stock"
+        component={StockScreen}
         options={{
-          tabBarLabel: '주식',
+          title: '주식',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons  name="chart-line" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="매수/매도"
+        name="AutoTrade"
         component={AutoTradeScreen}
         options={{
-          tabBarLabel: '매수/매도',
+          title: '매수/매도',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons  name="hand-coin" color={color} size={size} />
           ),
         }}
       />
       <Tab.Screen
-        name="회원정보"
+        name="User"
         component={UserScreen}
         options={{
-          tabBarLabel: '회원정보',
+          title: '회원정보',
           tabBarIcon: ({ color, size }) => (
             <MaterialCommunityIcons name="account" color={color} size={size} />
           ),
