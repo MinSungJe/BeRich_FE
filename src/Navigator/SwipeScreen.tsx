@@ -3,8 +3,8 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 import { Color } from '../resource/Color';
 import WelcomeScreen from '../Pages/BeforeLogin/WelcomeScreen';
 import StockInfoScreen from '../Pages/BeforeLogin/StockInfoScreen';
-import LoginInfoScreen from '../Pages/BeforeLogin/LoginInfoScreen';
 import AutoTradeInfoScreen from '../Pages/BeforeLogin/AutoTradeInfoScreen';
+import LoginInfoScreen from '../Pages/BeforeLogin/LoginInfoScreen';
 
 const Tab = createMaterialTopTabNavigator();
 

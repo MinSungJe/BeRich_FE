@@ -3,6 +3,7 @@ import { Button } from '@rneui/base';
 import { LabelInput, LabelSecretInput } from '../../Components/Input';
 import { ButtonStyles } from '../../Styles/Button.style';
 import { BoxStyles } from '../../Styles/Box.style';
+import { TextStyles } from '../../Styles/Text.style';
 
 export default function LoginScreen({navigation}) {
     return (
