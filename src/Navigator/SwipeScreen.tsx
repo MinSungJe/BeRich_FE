@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Color } from '../resource/Color';
-import WelcomeScreen from './WelcomeScreen';
-import StockInfoScreen from './StockInfoScreen';
-import LoginInfoScreen from './LoginInfoScreen';
-import AutoTradeInfoScreen from './AutoTradeInfoScreen';
+import WelcomeScreen from '../BeforeLogin/WelcomeScreen';
+import StockInfoScreen from '../BeforeLogin/StockInfoScreen';
+import LoginInfoScreen from '../BeforeLogin/LoginInfoScreen';
+import AutoTradeInfoScreen from '../BeforeLogin/AutoTradeInfoScreen';
 
 const Tab = createMaterialTopTabNavigator();
 
