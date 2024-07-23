@@ -1,11 +1,11 @@
 import { Text } from '@rneui/base';
 import { View } from 'react-native';
-import { TextStyles } from '../Styles/Text.style';
+import { TextStyles } from '../../styles/Text.style';
 
-export default function StockInfoScreen() {
+export default function WelcomeScreen() {
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text style={TextStyles.Main}>주식의 정보를 확인 가능합니다</Text>
+            <Text style={TextStyles.Main}>환영합니다!!!</Text>
         </View>
     );
 }

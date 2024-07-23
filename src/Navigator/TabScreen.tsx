@@ -1,8 +1,8 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Stock from '../Stock/page';
-import BuySell from '../Buy/page';
-import UserInfo from '../User/page';
+import StockScren from '../pages/AfterLogin/StockScreen';
+import AutoTradeScreen from '../pages/AfterLogin/AutoTradeScreen';
+import UserScreen from '../pages/AfterLogin/UserScreen';
 import { Color } from '../resource/Color';
 
 
@@ -17,7 +17,7 @@ export default function TabScreen() {
       }}>
       <Tab.Screen
         name="주식"
-        component={Stock}
+        component={StockScren}
         options={{
           tabBarLabel: '주식',
           tabBarIcon: ({ color, size }) => (
@@ -27,7 +27,7 @@ export default function TabScreen() {
       />
       <Tab.Screen
         name="매수/매도"
-        component={BuySell}
+        component={AutoTradeScreen}
         options={{
           tabBarLabel: '매수/매도',
           tabBarIcon: ({ color, size }) => (
@@ -37,7 +37,7 @@ export default function TabScreen() {
       />
       <Tab.Screen
         name="회원정보"
-        component={UserInfo}
+        component={UserScreen}
         options={{
           tabBarLabel: '회원정보',
           tabBarIcon: ({ color, size }) => (

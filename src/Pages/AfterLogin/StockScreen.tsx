@@ -1,10 +1,10 @@
 import { Text } from "@rneui/base";
 import { View } from "react-native";
 
-export default function BuySell() {
+export default function StockScreen() {
     return (
         <View>
-            <Text>매수/매도 페이지</Text>
+            <Text>주식 페이지임!!</Text>
         </View>
     )
 }
