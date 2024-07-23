@@ -1,11 +1,21 @@
-import { Text } from "@rneui/base";
-import { TextStyles } from "../styles/Text.style";
-import { useContext } from "react";
-import { AppContext } from "../contexts/AppContext";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { stockData } from "../resource/StockData";
+import { CandlestickChart } from "react-native-wagmi-charts";
 
-export function Graph({stock}) {
+export function Graph({ stock }) {
+
+    // api에서 필요한 data 불러오기
+    const data = stockData
 
     return (
-        <Text style={TextStyles.Detail}>{stock}</Text>
+        <GestureHandlerRootView>
+            <CandlestickChart.Provider data={data}>
+                <CandlestickChart>
+                    <CandlestickChart.Candles />
+                    <CandlestickChart.Crosshair />
+                </CandlestickChart>
+                <CandlestickChart.DatetimeText />
+            </CandlestickChart.Provider>
+        </GestureHandlerRootView>
     )
 }
