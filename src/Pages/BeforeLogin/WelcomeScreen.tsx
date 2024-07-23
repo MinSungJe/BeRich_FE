@@ -1,6 +1,6 @@
 import { Text } from '@rneui/base';
 import { View } from 'react-native';
-import { TextStyles } from '../Styles/Text.style';
+import { TextStyles } from '../../Styles/Text.style';
 
 export default function WelcomeScreen() {
     return (

@@ -1,9 +1,8 @@
 import { View } from 'react-native';
-import { BoxStyles } from '../Styles/Box.style';
-import { LabelInput, LabelSecretInput } from '../Components/Input';
-import { ButtonStyles } from '../Styles/Button.style';
 import { Button } from '@rneui/base';
-import { TextStyles } from '../Styles/Text.style';
+import { LabelInput, LabelSecretInput } from '../../Components/Input';
+import { ButtonStyles } from '../../Styles/Button.style';
+import { BoxStyles } from '../../Styles/Box.style';
 
 export default function LoginScreen({navigation}) {
     return (

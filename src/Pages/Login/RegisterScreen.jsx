@@ -1,9 +1,9 @@
 import { View } from 'react-native';
-import { BoxStyles } from '../Styles/Box.style';
-import { DateInput, EmailInput, LabelInput, LabelSecretInput, NameInput } from '../Components/Input';
 import { Button } from '@rneui/base';
-import { ButtonStyles } from '../Styles/Button.style';
-import { TextStyles } from '../Styles/Text.style';
+import { BoxStyles } from '../../Styles/Box.style';
+import { ButtonStyles } from '../../Styles/Button.style';
+import { TextStyles } from '../../Styles/Text.style';
+import { DateInput, EmailInput, LabelInput, LabelSecretInput, NameInput } from '../../Components/Input';
 
 export default function RegisterScreen({navigation}) {
     return (
