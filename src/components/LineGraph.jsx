@@ -5,6 +5,7 @@ import { BoxStyles } from '../styles/Box.style';
 import { stockData } from "../resource/StockData";
 import { dateFormatter, processLineData } from '../resource/ParseData';
 import { Color } from '../resource/Color';
+import { TextStyles } from '../styles/Text.style';
 
 export function LineGraph({ stock }) {
     const [lineChartData, setLineChartData] = useState([]);
@@ -26,9 +27,9 @@ export function LineGraph({ stock }) {
         const { x, y, data } = selectedEntry;
         return (
             data ?
-            <View style={styles.marker}>
-                <Text style={styles.markerText}>{`일자: ${timestamps[x]}`}</Text>
-                <Text style={styles.markerText}>{`종가: ${y}`}</Text>
+            <View style={[BoxStyles.MarkerBox, {position: 'absolute', left: (selectedEntry.x) * 2, top: -30}]}>
+                <Text style={TextStyles.Marker}>{`일자: ${timestamps[x]}`}</Text>
+                <Text style={TextStyles.Marker}>{`종가: ${y}`}</Text>
             </View>
             : null
         );
@@ -89,7 +90,7 @@ export function LineGraph({ stock }) {
                 autoScaleMinMaxEnabled={true}
                 doubleTapToZoomEnabled={false}
                 scaleXEnabled={true}
-                scaleYEnabled={true}
+                scaleYEnabled={false}
                 zoom={{
                     scaleX: 1, // 초기 확대 비율
                     scaleY: 1,
@@ -109,20 +110,3 @@ export function LineGraph({ stock }) {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    marker: {
-        position: 'absolute',
-        top: 20,
-        left: 20,
-        backgroundColor: 'white',
-        borderRadius: 4,
-        padding: 10,
-        borderColor: 'black',
-        borderWidth: 1,
-    },
-    markerText: {
-        fontSize: 14,
-        color: 'black',
-    },
-});

@@ -13,6 +13,7 @@ export const processCandleData = (data) => {
         shadowL: item.Low,
         open: item.Open,
         close: item.Close,
+        timestamp: item.timestamp
     }));
 };
 

@@ -3,16 +3,19 @@ import { processColor, View } from 'react-native';
 import { stockData } from "../resource/StockData";
 import { CandleStickChart } from 'react-native-charts-wrapper';
 import { BoxStyles } from '../styles/Box.style';
-import { processCandleData } from '../resource/ParseData';
+import { dateFormatter, processCandleData } from '../resource/ParseData';
 
 export function CandleGraph({ stock }) {
-    let [candleChartData, setCandleChartData] = useState([{"x":1719360000000,"open":80100.0,"shadowH":81000.0,"shadowL":79900.0,"close":80600.0,"Volume":0}])
+    let [candleChartData, setCandleChartData] = useState([])
 
     useEffect(() => {
         // api에서 필요한 data 불러오기
         const temp = processCandleData(stockData);
         setCandleChartData(temp)
     }, [])
+
+    // x축 레이블에 사용할 timestamp 배열 생성
+    const timestamps = (candleChartData.map(item => item.timestamp)).map(item => dateFormatter(item));
 
     return (
         <View style={[{ height: 500 }, BoxStyles.ContainerBox]}>
@@ -50,8 +53,7 @@ export function CandleGraph({ stock }) {
                 xAxis={{
                     drawLabels: true,
                     position: 'BOTTOM',
-                    valueFormatter: 'date',
-                    valueFormatterPattern: 'MM-dd-hh',
+                    valueFormatter: timestamps, // timestamps로 x축 결정
                     labelCount: 6,
                     granularityEnabled: true,
                     granularity: 1,

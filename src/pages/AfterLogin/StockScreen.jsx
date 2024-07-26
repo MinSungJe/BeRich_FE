@@ -33,7 +33,7 @@ export default function StockScreen({ navigation }) {
                     </View>
                 </View>
                 <View style={[BoxStyles.MainBox, BoxStyles.Mb20]}>
-                    <View style={BoxStyles.MainBoxTitle}>
+                    <View style={[BoxStyles.MainBoxTitle, BoxStyles.Mb30]}>
                         <Text style={[TextStyles.Detail, TextStyles.FcWhite]}>
                             <MaterialCommunityIcons name="chart-line" size={16} /> 주식 그래프
                         </Text>
