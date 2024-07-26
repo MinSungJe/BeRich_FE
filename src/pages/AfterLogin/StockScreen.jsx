@@ -4,12 +4,12 @@ import { ScrollView, View } from "react-native";
 import { StockPicker } from "../../components/StockPicker";
 import { BoxStyles } from "../../styles/Box.style";
 import { TextStyles } from "../../styles/Text.style";
-import { Graph } from '../../components/Graph';
+import { CandleGraph } from '../../components/CandleGraph';
+import { LineGraph } from '../../components/LineGraph';
 import { useContext, useEffect, useState } from 'react';
 import News from '../../components/News';
 import { ButtonStyles } from '../../styles/Button.style';
 import { AppContext } from '../../contexts/AppContext';
-import { NewGraph } from '../../components/Graph';
 
 export default function StockScreen({ navigation }) {
     const [stock, setStock] = useState('');
@@ -21,7 +21,7 @@ export default function StockScreen({ navigation }) {
 
     return (
         <View style={BoxStyles.P10}>
-            {/* <ScrollView showsVerticalScrollIndicator={false}> */}
+            <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={[BoxStyles.MainBox, BoxStyles.Mb20]}>
                     <View style={BoxStyles.MainBoxTitle}>
                         <Text style={[TextStyles.Detail, TextStyles.FcWhite]}>
@@ -39,7 +39,7 @@ export default function StockScreen({ navigation }) {
                         </Text>
                     </View>
                     <View style={BoxStyles.MainBoxContent}>
-                        <Graph stock={stock} />
+                        <LineGraph stock={stock} />
                     </View>
                 </View>
                 <View style={[BoxStyles.MainBox]}>
@@ -66,7 +66,7 @@ export default function StockScreen({ navigation }) {
                         }} 
                     />
                 </View>
-            {/* </ScrollView> */}
+            </ScrollView>
         </View>
     );
 }
