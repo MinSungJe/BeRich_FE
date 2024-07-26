@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { processColor, View } from 'react-native';
+import { processColor, StyleSheet, Text, View } from 'react-native';
 import { LineChart } from 'react-native-charts-wrapper';
 import { BoxStyles } from '../styles/Box.style';
 import { stockData } from "../resource/StockData";
@@ -8,6 +8,7 @@ import { Color } from '../resource/Color';
 
 export function LineGraph({ stock }) {
     const [lineChartData, setLineChartData] = useState([]);
+    const [selectedEntry, setSelectedEntry] = useState(null);
 
     useEffect(() => {
         // API에서 필요한 데이터 불러오기
@@ -17,6 +18,21 @@ export function LineGraph({ stock }) {
 
     // x축 레이블에 사용할 timestamp 배열 생성
     const timestamps = (lineChartData.map(item => item.timestamp)).map(item => dateFormatter(item));
+
+    // 툴팁을 위한 Marker 설정
+    const renderMarker = () => {
+        if (!selectedEntry) return null;
+
+        const { x, y, data } = selectedEntry;
+        return (
+            data ?
+            <View style={styles.marker}>
+                <Text style={styles.markerText}>{`일자: ${timestamps[x]}`}</Text>
+                <Text style={styles.markerText}>{`종가: ${y}`}</Text>
+            </View>
+            : null
+        );
+    };
 
     return (
         <View style={[{ height: 500 }, BoxStyles.ContainerBox]}>
@@ -83,7 +99,30 @@ export function LineGraph({ stock }) {
                 }}
                 pinchZoom={true}
                 keepPositionOnRotation={false}
+                onSelect={(event) => {
+                    if (event.nativeEvent) {
+                        setSelectedEntry(event.nativeEvent);
+                    }
+                }}
             />
+            {renderMarker()}
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    marker: {
+        position: 'absolute',
+        top: 20,
+        left: 20,
+        backgroundColor: 'white',
+        borderRadius: 4,
+        padding: 10,
+        borderColor: 'black',
+        borderWidth: 1,
+    },
+    markerText: {
+        fontSize: 14,
+        color: 'black',
+    },
+});

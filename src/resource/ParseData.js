@@ -19,5 +19,5 @@ export const processCandleData = (data) => {
 // x축 레이블에 사용할 시간 포맷 함수
 export const dateFormatter = (timestamp) => {
     const date = new Date(timestamp);
-    return `${date.getMonth() + 1}-${date.getDate()}`; // MM-DD 포맷
+    return `${(date.getMonth() + 1).toString().padStart(2, "0")}-${(date.getDate()).toString().padStart(2, "0")}`; // MM-DD 포맷
 };
